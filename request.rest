@@ -1,0 +1,29 @@
+GET http://localhost:9000/user/
+token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMzNzQyZmE0YzE4OTk3MmUyYzUyYjA1IiwiZW1haWwiOiJhbGl6YW1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NjQ5OTQ0NTEsImV4cCI6MTY2NTAwMTY1MX0.7W7jOulkI3x017Xm2do4nCNKqDusUClcNG7aaitKq-E"
+
+###
+POST http://localhost:9000/user/login
+Content-Type: application/json
+
+{
+    "email" : "alizamin@gmail.com",
+    "password" : "1234"
+}
+
+###
+POST http://localhost:9000/user/update
+Content-Type: application/json
+
+{
+    "email" : "alizamin@gmail.com",
+    "name" : "Zamin Ali Shigri"
+}
+
+###
+GET http://localhost:9000/welcome
+Content-Type: application/json
+
+{
+    "{{$aadToken}}":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMzNzQyZmE0YzE4OTk3MmUyYzUyYjA1IiwiZW1haWwiOiJhbGl6YW1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NjQ5OTQ0NTEsImV4cCI6MTY2NTAwMTY1MX0.7W7jOulkI3x017Xm2do4nCNKqDusUClcNG7aaitKq-E"
+}
+
