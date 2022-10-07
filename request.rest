@@ -1,13 +1,13 @@
 GET http://localhost:9000/user/
-token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMzNzQyZmE0YzE4OTk3MmUyYzUyYjA1IiwiZW1haWwiOiJhbGl6YW1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NjQ5OTQ0NTEsImV4cCI6MTY2NTAwMTY1MX0.7W7jOulkI3x017Xm2do4nCNKqDusUClcNG7aaitKq-E"
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMzZmQ1NWVjMDI5ODVhMDE3N2Y5YzRkIiwiZW1haWwiOiJtYXJ0aGFAZXhhbXBsZS5jb20iLCJpYXQiOjE2NjUxMjk5ODQsImV4cCI6MTY2NTEzNzE4NH0.iVQxwg8gL5IaLFkv7O8NBG6J3vkDA64ry6JOy0VLLE4
 
 ###
 POST http://localhost:9000/user/login
 Content-Type: application/json
 
 {
-    "email" : "alizamin@gmail.com",
-    "password" : "1234"
+    "email" : "martha@example.com",
+    "password" : "12345678"
 }
 
 ###
@@ -15,8 +15,8 @@ POST http://localhost:9000/user/update
 Content-Type: application/json
 
 {
-    "email" : "alizamin@gmail.com",
-    "name" : "Zamin Ali Shigri"
+    "email" : "martha@example.com",
+    "name" : "Martha Steve"
 }
 
 ###
@@ -27,3 +27,13 @@ Content-Type: application/json
     "{{$aadToken}}":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjMzNzQyZmE0YzE4OTk3MmUyYzUyYjA1IiwiZW1haWwiOiJhbGl6YW1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NjQ5OTQ0NTEsImV4cCI6MTY2NTAwMTY1MX0.7W7jOulkI3x017Xm2do4nCNKqDusUClcNG7aaitKq-E"
 }
 
+###
+POST http://localhost:9000/user/signup
+Content-Type: application/json
+
+{
+    "name" : "Martha Steve",
+    "email": "martha@example.com",
+    "password" : "12345678",
+    "cpassword" : "12345678"
+}
